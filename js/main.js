@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════════════════
-   Valantum — Main JavaScript
+   Brentford Capital — Main JavaScript
    Slideshow · Navigation · Scroll Reveal · Mobile Menu · Smooth Scroll
    ═══════════════════════════════════════════════════════════════════════════ */
 
