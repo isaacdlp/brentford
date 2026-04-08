@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valantum | Where Capital Meets Conviction</title>
+  <meta name="description" content="Valantum is a Registered Investment Advisor providing institutional-grade wealth management, fund management, technology secondaries, and securities-based lending for high-net-worth individuals and family offices.">
+  <meta property="og:title"       content="Valantum | Where Capital Meets Conviction">
+  <meta property="og:description" content="Institutional-grade wealth management and alternative investments for discerning families and sophisticated investors.">
+  <meta property="og:type"        content="website">
+  <meta name="theme-color"        content="#0D1F3C">
+
+  <!-- Inline SVG favicon — navy square with champagne V -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230D1F3C'/%3E%3Ctext x='50%25' y='52%25' dominant-baseline='central' text-anchor='middle' font-family='Georgia%2Cserif' font-size='22' font-weight='600' fill='%23C8A96A'%3EV%3C/text%3E%3C/svg%3E">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════ NAVIGATION -->
+<nav id="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+
+    <a href="#hero" class="nav-logo" aria-label="Valantum — home">
+      <span class="logo-v">V</span>ALANTUM
+    </a>
+
+    <div class="nav-right">
+      <ul class="nav-links" id="navLinks">
+
+        <li><a href="#wealth-management" class="nav-link">Wealth Management</a></li>
+        <li><a href="#fund-management"   class="nav-link">Funds</a></li>
+        <li><a href="#tech-secondaries"  class="nav-link">Secondaries</a></li>
+        <li><a href="#stock-loan"        class="nav-link">Loans</a></li>
+        <li><a href="#about"             class="nav-link">About</a></li>
+        <li><a href="#contact"           class="nav-link">Contact</a></li>
+
+      </ul>
+
+      <a href="https://scale.venture360.co" class="nav-cta">Private Area</a>
+
+      <button class="hamburger" id="hamburger"
+              aria-label="Toggle menu" aria-expanded="false"
+              aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════════════════ HERO -->
+<section id="hero" aria-label="Valantum hero">
+
+  <!-- Background slideshow -->
+  <div class="hero-slideshow" aria-hidden="true">
+    <!-- Slide 1: Manhattan financial district at golden hour -->
+    <div class="hero-slide active"
+         style="background-image:url('media/hero-manhattan.jpg')">
+    </div>
+    <!-- Slide 2: Happy wealthy family at the beach -->
+    <div class="hero-slide"
+         style="background-image:url('media/hero-family-beach.jpg')">
+    </div>
+    <!-- Slide 3: Modern luxury estate exterior -->
+    <div class="hero-slide"
+         style="background-image:url('media/hero-estate.jpg')">
+    </div>
+    <!-- Slide 4: Superyacht at sea -->
+    <div class="hero-slide"
+         style="background-image:url('media/hero-yacht.jpg')">
+    </div>
+  </div>
+
+  <div class="hero-overlay"          aria-hidden="true"></div>
+  <div class="hero-overlay-gradient" aria-hidden="true"></div>
+  <div class="hero-overlay-bottom"   aria-hidden="true"></div>
+
+  <!-- Content -->
+  <div class="hero-content container">
+    <p class="hero-eyebrow">Registered Investment Advisor</p>
+    <h1>Where Capital<br><em>Meets Conviction</em></h1>
+    <p class="hero-sub">Institutional-grade wealth management and alternative investments for discerning families and sophisticated investors.</p>
+    <div class="hero-actions">
+      <a href="#services" class="btn btn-champagne">Explore Our Services</a>
+      <a href="#about"    class="btn btn-ghost">Our Philosophy</a>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="hero-scroll" aria-hidden="true">
+    <span class="scroll-label">Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+
+  <!-- Slide dots -->
+  <div class="hero-dots" role="tablist" aria-label="Slideshow navigation">
+    <button class="hero-dot active" role="tab" aria-selected="true"  aria-label="Slide 1" data-slide="0"></button>
+    <button class="hero-dot"        role="tab" aria-selected="false" aria-label="Slide 2" data-slide="1"></button>
+    <button class="hero-dot"        role="tab" aria-selected="false" aria-label="Slide 3" data-slide="2"></button>
+    <button class="hero-dot"        role="tab" aria-selected="false" aria-label="Slide 4" data-slide="3"></button>
+  </div>
+
+</section>
+
+<!-- ════════════════════════════════════════════════════ PHILOSOPHY PILLARS -->
+<section id="philosophy" aria-label="Our principles">
+  <div class="container">
+    <div class="pillars-grid">
+
+      <div class="pillar reveal">
+        <div class="pillar-icon" aria-hidden="true">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="1.4">
+            <path d="M15 3L4 7.5v7.5c0 6.6 4.7 12.8 11 14.5C22.3 27.8 27 21.6 27 15V7.5L15 3z" stroke-linejoin="round"/>
+            <path d="M10 15l3.5 3.5L21 11" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3>Fiduciary Commitment</h3>
+        <p>We act solely in your best interest at all times — bound by the highest standard of care under SEC regulation, free from commissions or product bias.</p>
+      </div>
+
+      <div class="pillar reveal">
+        <div class="pillar-icon" aria-hidden="true">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="1.4">
+            <circle cx="15" cy="15" r="11"/>
+            <path d="M15 8v7.5l4.5 4.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>Long-Term Thinking</h3>
+        <p>True wealth is measured in generations, not quarters. We plan for the horizons that matter most — your family's financial future, not the next earnings cycle.</p>
+      </div>
+
+      <div class="pillar reveal">
+        <div class="pillar-icon" aria-hidden="true">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="1.4">
+            <rect x="3" y="19" width="5" height="8" rx="1"/>
+            <rect x="12" y="13" width="5" height="14" rx="1"/>
+            <rect x="21" y="6" width="5" height="21" rx="1"/>
+            <path d="M5.5 18l7-9 7.5 3.5 7-9" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3>Institutional Rigor</h3>
+        <p>Our investment process mirrors the discipline of the world's most respected endowments and sovereign wealth funds — rigorous, research-driven, and unemotional.</p>
+      </div>
+
+      <div class="pillar reveal">
+        <div class="pillar-icon" aria-hidden="true">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="1.4">
+            <circle cx="11" cy="9" r="4"/>
+            <circle cx="21" cy="9" r="4"/>
+            <path d="M3 25c0-4.4 3.6-8 8-8h9c4.4 0 8 3.6 8 8" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>Personal Service</h3>
+        <p>Every client relationship is built on deep trust, direct access, and a genuine understanding of your life — not a number in a portfolio management system.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ SERVICES -->
+<section id="services" aria-labelledby="services-heading">
+  <div class="container">
+
+    <div class="section-header reveal">
+      <span class="eyebrow">Our Capabilities</span>
+      <h2 id="services-heading">A Complete Spectrum<br>of Wealth Solutions</h2>
+      <p class="section-sub">From personal wealth stewardship to institutional-grade alternative investments, Valantum delivers the full range of sophisticated financial services under one trusted partnership.</p>
+    </div>
+
+    <div class="services-grid">
+
+      <!-- Wealth Management -->
+      <div class="service-card reveal">
+        <div class="sc-icon" aria-hidden="true">
+          <svg width="38" height="38" viewBox="0 0 38 38" fill="none" stroke="currentColor" stroke-width="1.4">
+            <path d="M19 4L5 9.5v10c0 8.3 6 16 14 18.3C27 35.5 33 27.8 33 19.5V9.5L19 4z" stroke-linejoin="round"/>
+            <path d="M13 19l4.5 4.5L26 14" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="sc-body">
+          <h3>Wealth Management</h3>
+          <p>Comprehensive financial guidance for high-net-worth individuals and family offices — built around your life, your values, and the legacy you intend to leave.</p>
+          <ul class="sc-list">
+            <li>Investment management &amp; portfolio construction</li>
+            <li>Tax-efficient wealth structuring</li>
+            <li>Estate &amp; legacy planning coordination</li>
+            <li>Family office services</li>
+          </ul>
+        </div>
+        <a href="#wealth-management" class="sc-link">
+          Learn More
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+            <path d="M2.5 6.5h8M7.5 3.5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Fund Management -->
+      <div class="service-card reveal">
+        <div class="sc-icon" aria-hidden="true">
+          <svg width="38" height="38" viewBox="0 0 38 38" fill="none" stroke="currentColor" stroke-width="1.4">
+            <rect x="4" y="15" width="30" height="18" rx="2"/>
+            <path d="M13 15V11a6 6 0 0112 0v4" stroke-linecap="round"/>
+            <circle cx="19" cy="24" r="3"/>
+            <path d="M19 21v-3M19 27v2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="sc-body">
+          <h3>Fund Management</h3>
+          <p>Institutional access to Real Estate, Venture Capital, Private Equity, and Hedge Fund strategies — delivered with the disciplined rigor of an endowment-level investor.</p>
+          <ul class="sc-list">
+            <li>Real estate fund allocations</li>
+            <li>Venture capital &amp; growth equity</li>
+            <li>Private equity co-investments</li>
+            <li>Diversified hedge fund strategies</li>
+          </ul>
+        </div>
+        <a href="#fund-management" class="sc-link">
+          Learn More
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+            <path d="M2.5 6.5h8M7.5 3.5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Technology Secondaries -->
+      <div class="service-card reveal">
+        <div class="sc-icon" aria-hidden="true">
+          <svg width="38" height="38" viewBox="0 0 38 38" fill="none" stroke="currentColor" stroke-width="1.4">
+            <rect x="4" y="4" width="30" height="22" rx="2"/>
+            <path d="M13 34h12M19 26v8" stroke-linecap="round"/>
+            <path d="M11 15l5 5 5-7 6 4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="sc-body">
+          <h3>Technology Secondaries</h3>
+          <p>Pre-IPO access to transformative, highly coveted private companies before they reach public markets — for investors who seek exceptional, asymmetric returns.</p>
+          <ul class="sc-list">
+            <li>Secondary market transactions</li>
+            <li>Pre-IPO share allocations</li>
+            <li>Late-stage unicorn access</li>
+            <li>Founder &amp; employee liquidity solutions</li>
+          </ul>
+        </div>
+        <a href="#tech-secondaries" class="sc-link">
+          Learn More
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+            <path d="M2.5 6.5h8M7.5 3.5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Stock Loan Financing -->
+      <div class="service-card reveal">
+        <div class="sc-icon" aria-hidden="true">
+          <svg width="38" height="38" viewBox="0 0 38 38" fill="none" stroke="currentColor" stroke-width="1.4">
+            <circle cx="19" cy="19" r="13"/>
+            <path d="M19 11v2M19 25v2M13 13l1.5 1.5M23.5 23.5L25 25M11 19h2M25 19h2M13 25l1.5-1.5M23.5 14.5L25 13" stroke-linecap="round"/>
+            <circle cx="19" cy="19" r="5"/>
+          </svg>
+        </div>
+        <div class="sc-body">
+          <h3>Stock Loan Financing</h3>
+          <p>Securities-based lending that unlocks immediate liquidity from concentrated equity positions — without triggering a taxable sale or surrendering your upside potential.</p>
+          <ul class="sc-list">
+            <li>Loans against public equity portfolios</li>
+            <li>Non-recourse structures available</li>
+            <li>Tax-efficient liquidity access</li>
+            <li>Preserve market exposure &amp; upside</li>
+          </ul>
+        </div>
+        <a href="#stock-loan" class="sc-link">
+          Learn More
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+            <path d="M2.5 6.5h8M7.5 3.5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ LIFESTYLE -->
+<section id="lifestyle" aria-label="The Valantum client lifestyle">
+  <div class="container lifestyle-header reveal">
+    <span class="eyebrow eyebrow-light">The Valantum Client</span>
+    <h2>The Art of Living Well</h2>
+    <p>We serve those who have earned the extraordinary — and who understand that true wealth opens doors to life's finest experiences.</p>
+  </div>
+
+  <div class="lifestyle-mosaic" aria-hidden="true">
+    <!-- Item 1 (tall): Superyacht -->
+    <div class="mosaic-item"
+         style="background-image:url('media/hero-yacht.jpg')"
+         role="img" aria-label="Superyacht at sea">
+      <div class="mosaic-caption">The Open Sea</div>
+    </div>
+    <!-- Item 2: Horse racing -->
+    <div class="mosaic-item"
+         style="background-image:url('media/lifestyle-horse-racing.jpg')"
+         role="img" aria-label="Horse racing">
+      <div class="mosaic-caption">Tradition &amp; Sport</div>
+    </div>
+    <!-- Item 3: Wealthy family / coastline -->
+    <div class="mosaic-item"
+         style="background-image:url('media/lifestyle-family.jpg')"
+         role="img" aria-label="Happy family outdoors">
+      <div class="mosaic-caption">Family &amp; Legacy</div>
+    </div>
+    <!-- Item 4 (wide): Vineyard -->
+    <div class="mosaic-item"
+         style="background-image:url('media/lifestyle-vineyard.jpg')"
+         role="img" aria-label="Rolling vineyard at sunset">
+      <div class="mosaic-caption">The Vine &amp; the Vintage</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════ SERVICE DETAIL: WEALTH MANAGEMENT -->
+<section id="wealth-management" class="service-detail" aria-labelledby="wm-heading">
+  <div class="container">
+    <div class="detail-grid">
+
+      <!-- Image side -->
+      <div class="detail-img-wrap reveal">
+        <img src="media/wealth-management.jpg"
+             alt="Wealth management office" loading="lazy">
+        <div class="detail-img-accent" aria-hidden="true"></div>
+      </div>
+
+      <!-- Content side -->
+      <div class="detail-content reveal">
+        <span class="eyebrow">Wealth Management</span>
+        <h2 id="wm-heading">Protecting and Growing<br>What Matters Most</h2>
+        <p class="detail-lead">For high-net-worth individuals and family offices, Valantum provides a comprehensive, highly personalized approach to wealth management — beginning with a deep understanding of your financial life, goals, and values.</p>
+        <p class="detail-body">We craft tailored strategies designed to protect, grow, and ultimately transfer your wealth across generations — working alongside your existing legal and tax advisors as the trusted quarterback of your financial life.</p>
+
+        <div class="detail-features">
+          <div class="detail-feature">
+            <div class="df-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9l3.5 3.5 8.5-8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <strong>Investment Management</strong>
+              <span>Customized portfolios built around your risk profile, tax situation, and long-term objectives</span>
+            </div>
+          </div>
+          <div class="detail-feature">
+            <div class="df-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9l3.5 3.5 8.5-8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <strong>Tax Optimization</strong>
+              <span>Proactive strategies to minimize tax drag across all your assets, accounts, and entities</span>
+            </div>
+          </div>
+          <div class="detail-feature">
+            <div class="df-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9l3.5 3.5 8.5-8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <strong>Estate Planning Coordination</strong>
+              <span>Working alongside your attorneys to preserve family wealth and ensure a seamless transfer of assets</span>
+            </div>
+          </div>
+          <div class="detail-feature">
+            <div class="df-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9l3.5 3.5 8.5-8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <strong>Family Office Services</strong>
+              <span>Consolidated reporting, administrative support, and coordination for complex multi-entity households</span>
+            </div>
+          </div>
+        </div>
+
+        <a href="#contact" class="btn btn-navy">Begin a Conversation</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════ SERVICE DETAIL: FUND MANAGEMENT -->
+<section id="fund-management" class="service-detail service-detail-alt" aria-labelledby="fm-heading">
+  <div class="container">
+    <div class="detail-grid">
+
+      <!-- Content side (left on this one) -->
+      <div class="detail-content reveal">
+        <span class="eyebrow">Fund Management</span>
+        <h2 id="fm-heading">Institutional-Grade<br>Alternative Investment Access</h2>
+        <p class="detail-lead">Valantum's fund management capabilities span the full spectrum of alternatives — from stabilizing real assets to high-growth venture strategies — delivered with endowment-level discipline.</p>
+        <p class="detail-body">We bring rigorous due diligence, thoughtful manager selection, and ongoing monitoring to every fund relationship, giving our clients access to strategies previously reserved for the largest institutional investors in the world.</p>
+
+        <div class="detail-features">
+          <div class="detail-feature">
+            <div class="df-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9l3.5 3.5 8.5-8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <strong>Real Estate Funds</strong>
+              <span>Core, value-add, and opportunistic strategies across residential, commercial, and industrial sectors</span>
+            </div>
+          </div>
+          <div class="detail-feature">
+            <div class="df-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9l3.5 3.5 8.5-8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <strong>Venture Capital</strong>
+              <span>Access to curated VC managers and direct co-investment opportunities in early and growth-stage companies</span>
+            </div>
+          </div>
+          <div class="detail-feature">
+            <div class="df-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9l3.5 3.5 8.5-8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <strong>Private Equity</strong>
+              <span>Buyout, growth equity, and special situations strategies through carefully selected GP relationships</span>
+            </div>
+          </div>
+          <div class="detail-feature">
+            <div class="df-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9l3.5 3.5 8.5-8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <strong>Hedge Funds</strong>
+              <span>Diversified absolute return strategies designed to perform resiliently across varying market conditions</span>
+            </div>
+          </div>
+        </div>
+
+        <a href="#contact" class="btn btn-navy">Explore Fund Strategies</a>
+      </div>
+
+      <!-- Image side (right on this one) -->
+      <div class="detail-img-wrap reveal">
+        <img src="media/fund-management.jpg"
+             alt="Institutional real estate representing fund management" loading="lazy">
+        <div class="detail-img-accent-left" aria-hidden="true"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════ SERVICE DETAIL: TECH SECONDARIES -->
+<section id="tech-secondaries" class="service-detail" aria-labelledby="ts-heading">
+  <div class="container">
+    <div class="detail-grid">
+
+      <!-- Image side -->
+      <div class="detail-img-wrap reveal">
+        <img src="media/tech-secondaries.jpg"
+             alt="Technology innovation representing private market opportunities" loading="lazy">
+        <div class="detail-img-accent" aria-hidden="true"></div>
+      </div>
+
+      <!-- Content side -->
+      <div class="detail-content reveal">
+        <span class="eyebrow">Technology Secondaries</span>
+        <h2 id="ts-heading">First Access to<br>Tomorrow's Category Leaders</h2>
+        <p class="detail-lead">The most compelling investment opportunities of our generation are being built in private markets. Valantum's technology secondaries platform provides sophisticated investors with access to pre-IPO shares in transformative companies before they become household names.</p>
+        <p class="detail-body">Through our established network of founders, early investors, and institutional counterparties, we source and structure transactions in the most sought-after private technology companies — often before public markets ever have the chance to price them.</p>
+
+        <div class="detail-features">
+          <div class="detail-feature">
+            <div class="df-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9l3.5 3.5 8.5-8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <strong>Secondary Purchases</strong>
+              <span>Acquire existing equity positions in late-stage private companies from early investors and employees seeking liquidity</span>
+            </div>
+          </div>
+          <div class="detail-feature">
+            <div class="df-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9l3.5 3.5 8.5-8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <strong>Primary Allocations</strong>
+              <span>Direct access to select venture-backed companies raising capital in late-stage growth rounds</span>
+            </div>
+          </div>
+          <div class="detail-feature">
+            <div class="df-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9l3.5 3.5 8.5-8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <strong>Founder &amp; Employee Liquidity</strong>
+              <span>Structured solutions for early employees, founders, and angel investors seeking to monetize illiquid private holdings</span>
+            </div>
+          </div>
+          <div class="detail-feature">
+            <div class="df-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9l3.5 3.5 8.5-8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <strong>Portfolio Construction</strong>
+              <span>Thoughtful sizing, diversification, and risk management across technology verticals and investment stages</span>
+            </div>
+          </div>
+        </div>
+
+        <a href="#contact" class="btn btn-navy">Access Pre-IPO Opportunities</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════ SERVICE DETAIL: STOCK LOAN -->
+<section id="stock-loan" class="service-detail service-detail-alt" aria-labelledby="sl-heading">
+  <div class="container">
+    <div class="detail-grid">
+
+      <!-- Content side (left) -->
+      <div class="detail-content reveal">
+        <span class="eyebrow">Stock Loan Financing</span>
+        <h2 id="sl-heading">Unlock Liquidity.<br>Preserve Your Upside.</h2>
+        <p class="detail-lead">Valantum's Stock Loan Financing program allows clients to borrow against concentrated equity positions, generating immediate liquidity without triggering a taxable event or surrendering market exposure.</p>
+        <p class="detail-body">For investors with significant positions in publicly traded securities, our securities-based lending solutions provide the capital flexibility to pursue new opportunities — without the costly decision of selling your portfolio.</p>
+
+        <div class="detail-features">
+          <div class="detail-feature">
+            <div class="df-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9l3.5 3.5 8.5-8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <strong>Portfolio-Based Loans</strong>
+              <span>Borrow against a diversified portfolio or concentrated single-name position in publicly traded securities</span>
+            </div>
+          </div>
+          <div class="detail-feature">
+            <div class="df-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9l3.5 3.5 8.5-8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <strong>Tax-Efficient Access to Capital</strong>
+              <span>Generate liquidity without selling — deferring capital gains and maintaining your long-term investment thesis</span>
+            </div>
+          </div>
+          <div class="detail-feature">
+            <div class="df-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9l3.5 3.5 8.5-8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <strong>Competitive Structures</strong>
+              <span>Transparent terms, institutional pricing, and flexible repayment schedules tailored to your situation</span>
+            </div>
+          </div>
+          <div class="detail-feature">
+            <div class="df-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9l3.5 3.5 8.5-8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <strong>Preserve Market Exposure</strong>
+              <span>Maintain beneficial ownership and full participation in potential upside while accessing needed capital</span>
+            </div>
+          </div>
+        </div>
+
+        <a href="#contact" class="btn btn-navy">Explore Lending Solutions</a>
+      </div>
+
+      <!-- Image side (right) -->
+      <div class="detail-img-wrap reveal">
+        <img src="media/stock-loan.jpg"
+             alt="Financial markets representing securities-based lending" loading="lazy">
+        <div class="detail-img-accent-left" aria-hidden="true"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ APPROACH -->
+<section id="about" class="approach-section" aria-labelledby="approach-heading">
+  <div class="container">
+
+    <div class="section-header section-header-light reveal">
+      <span class="eyebrow">Our Philosophy</span>
+      <h2 id="approach-heading">A Different Kind<br>of Advisor</h2>
+      <p class="section-sub">At Valantum, we believe that true wealth management demands independence, discipline, and access — and that no client should ever have to compromise on any of the three.</p>
+    </div>
+
+    <div class="approach-grid">
+
+      <div class="approach-card reveal">
+        <div class="approach-num">01</div>
+        <h3>Independence</h3>
+        <p>As a Registered Investment Advisor, we are held to a fiduciary standard — legally required to act in your best interest at all times. We earn no commissions and sell no products. Our only incentive is your success.</p>
+      </div>
+
+      <div class="approach-card reveal">
+        <div class="approach-num">02</div>
+        <h3>Discipline</h3>
+        <p>Market cycles come and go. Sentiment shifts. Headlines distort. Our process-driven approach keeps emotion out of decision-making, keeping your portfolio aligned with your long-term goals regardless of short-term noise.</p>
+      </div>
+
+      <div class="approach-card reveal">
+        <div class="approach-num">03</div>
+        <h3>Access</h3>
+        <p>The most compelling opportunities are not available to everyone. Through our institutional network and carefully cultivated relationships, we source what others cannot — from pre-IPO secondaries to best-in-class alternative fund managers.</p>
+      </div>
+
+    </div>
+
+    <blockquote class="approach-quote reveal">
+      <p>"Wealth is not about numbers. It is about the freedom to live deliberately, provide generously, and leave something worthy behind."</p>
+      <cite>— The Valantum Philosophy</cite>
+    </blockquote>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ INSIGHTS -->
+<!-- NOTE: Insights section hidden pending real editorial content
+<section id="insights" aria-labelledby="insights-heading">
+  <div class="container">
+
+    <div class="section-header reveal">
+      <span class="eyebrow">Thought Leadership</span>
+      <h2 id="insights-heading">Perspectives &amp; Insights</h2>
+      <p class="section-sub">Our team shares views on markets, wealth planning, and the evolving landscape of alternative investments for discerning investors.</p>
+    </div>
+
+    <div class="insights-grid">
+
+      <article class="insight-card reveal">
+        <div class="insight-img"
+             style="background-image:url('media/stock-loan.jpg')"
+             role="img" aria-label="Financial markets">
+          <span class="insight-cat">Investment Perspectives</span>
+        </div>
+        <div class="insight-body">
+          <time class="insight-date" datetime="2025-03">March 2025</time>
+          <h3>The Case for Private Market Diversification in Today's Macro Environment</h3>
+          <p>As public market volatility persists, sophisticated investors are increasingly turning to private markets for return enhancement and portfolio resilience.</p>
+          <a href="#" class="insight-link">Read More →</a>
+        </div>
+      </article>
+
+      <article class="insight-card reveal">
+        <div class="insight-img"
+             style="background-image:url('media/tech-secondaries.jpg')"
+             role="img" aria-label="Technology innovation">
+          <span class="insight-cat">Technology Markets</span>
+        </div>
+        <div class="insight-body">
+          <time class="insight-date" datetime="2025-02">February 2025</time>
+          <h3>Technology Secondaries: Why Pre-IPO Access Has Never Mattered More</h3>
+          <p>The gap between private and public market valuations is creating historically attractive entry points for secondary buyers in the technology landscape.</p>
+          <a href="#" class="insight-link">Read More →</a>
+        </div>
+      </article>
+
+      <article class="insight-card reveal">
+        <div class="insight-img"
+             style="background-image:url('media/valantum-standard.jpg')"
+             role="img" aria-label="Family wealth planning">
+          <span class="insight-cat">Wealth Planning</span>
+        </div>
+        <div class="insight-body">
+          <time class="insight-date" datetime="2025-01">January 2025</time>
+          <h3>Estate Planning in a Changing Tax Landscape: What Families Need to Know Now</h3>
+          <p>With potential changes to the estate tax exemption on the horizon, high-net-worth families should act decisively to evaluate and strengthen their legacy plans.</p>
+          <a href="#" class="insight-link">Read More →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+-->
+
+<!-- ══════════════════════════════════════════ THE VALANTUM STANDARD -->
+<section id="standard" class="service-detail service-detail-alt" aria-labelledby="standard-heading">
+  <div class="container">
+    <div class="detail-grid">
+
+      <!-- Image side -->
+      <div class="detail-img-wrap reveal">
+        <img src="media/valantum-standard.jpg"
+             alt="Trusted advisor in conversation with a valued client" loading="lazy">
+        <div class="detail-img-accent" aria-hidden="true"></div>
+      </div>
+
+      <!-- Content side -->
+      <div class="detail-content reveal">
+        <span class="eyebrow">The Valantum Standard</span>
+        <h2 id="standard-heading">Built on Trust.<br>Measured in Generations.</h2>
+        <p class="detail-lead">Every relationship at Valantum begins with a single promise: we will always act in your interest — with complete transparency, rigorous discipline, and a depth of care you will feel in every interaction.</p>
+        <p class="detail-body">We do not believe that great wealth management is about products, platforms, or market timing. It is about relationships — built slowly, maintained closely, and trusted absolutely. These are the standards we hold ourselves to, without exception.</p>
+
+        <div class="detail-features">
+          <div class="detail-feature">
+            <div class="df-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                <path d="M9 2L2.5 4.5v5c0 4 2.8 7.7 6.5 8.7C12.7 17.2 15.5 13.5 15.5 9.5v-5L9 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div>
+              <strong>Fiduciary at All Times</strong>
+              <span>As a Registered Investment Advisor, we are legally and ethically bound to place your interests above all others — always, without exception</span>
+            </div>
+          </div>
+          <div class="detail-feature">
+            <div class="df-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                <circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M9 5v4.5l3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div>
+              <strong>Complete Independence</strong>
+              <span>We earn no commissions and carry no product obligations — our only incentive is the enduring success and satisfaction of our clients</span>
+            </div>
+          </div>
+          <div class="detail-feature">
+            <div class="df-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                <path d="M3 9h12M9 3v12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <div>
+              <strong>Absolute Discretion</strong>
+              <span>Your financial affairs, goals, and circumstances are treated with the highest levels of confidentiality and professional discretion</span>
+            </div>
+          </div>
+          <div class="detail-feature">
+            <div class="df-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                <path d="M2 13l4-4 3 3 4-5 3 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="2" y="2" width="14" height="14" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <div>
+              <strong>Transparent Reporting</strong>
+              <span>Consolidated, clear, and comprehensive reporting across all your accounts, assets, and strategies — on your schedule</span>
+            </div>
+          </div>
+        </div>
+
+        <a href="#contact" class="btn btn-navy">Discover the Difference</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ CONNECT -->
+<section id="contact" class="connect-section" aria-labelledby="contact-heading">
+  <div class="container">
+    <div class="connect-inner reveal">
+      <span class="eyebrow">Begin a Conversation</span>
+      <h2 id="contact-heading">The Right Advisor<br>Changes Everything</h2>
+      <p>The most important step toward securing your family's financial future begins with a single conversation. We welcome inquiries from qualified investors and discerning families seeking a trusted partner for the long term.</p>
+      <div class="connect-actions">
+        <a href="mailto:inquiry@valantum.com" class="btn btn-champagne">Schedule a Call</a>
+        <a href="mailto:inquiry@valantum.com" class="btn btn-ghost-champagne">Send a Message</a>
+      </div>
+      <p class="connect-note">For qualified investors only. Minimum investment requirements may apply. All inquiries are held in strictest confidence.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════ FOOTER -->
+<footer id="footer" role="contentinfo">
+  <div class="container">
+
+    <div class="footer-main">
+
+      <!-- Brand -->
+      <div class="footer-brand">
+        <a href="#hero" class="footer-logo">VALANTUM</a>
+        <p>A Registered Investment Advisor dedicated to preserving and growing wealth for discerning individuals, families, and institutions across generations.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Valantum on LinkedIn">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
+              <rect x="1" y="1" width="14" height="14" rx="2"/>
+              <path d="M5.5 7v4.5M5.5 5v-.1" stroke-linecap="round"/>
+              <path d="M8.5 11.5V9c0-1.1.9-1.5 1.5-1.5s1.5.4 1.5 1.5v2.5M8.5 7v4.5" stroke-linecap="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Nav columns -->
+      <nav class="footer-nav" aria-label="Footer navigation">
+
+        <div class="footer-col">
+          <h4>Capabilities</h4>
+          <ul>
+            <li><a href="#wealth-management">Wealth Management</a></li>
+            <li><a href="#fund-management">Fund Management</a></li>
+            <li><a href="#tech-secondaries">Technology Secondaries</a></li>
+            <li><a href="#stock-loan">Stock Loan Financing</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#about">Our Philosophy</a></li>
+            <li><a href="#about">About Valantum</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#standard">Our Standard</a></li>
+            <li><a href="#">Client Portal</a></li>
+            <li><a href="#">Form ADV</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="#">Delaware, USA</a></li>
+            <li><a href="mailto:inquiry@valantum.com">inquiry@valantum.com</a></li>
+            <li><a href="tel:+12125550100">+1 (615) 266-6662</a></li>
+          </ul>
+        </div>
+
+      </nav>
+    </div>
+
+    <!-- Legal -->
+    <div class="footer-bottom">
+      <p class="footer-legal">Financial advisory offered through Rapid Scale, a Registered Investment Advisor with the U.S. Securities and Exchange Commission. Registration does not imply a certain level of skill or training. The information on this website is for informational purposes only and does not constitute an offer to sell or a solicitation of an offer to buy any security. Investing involves risk, including the possible loss of principal. Past performance is not indicative of future results. Alternative investments involve unique risks and are not suitable for all investors. Any reference to specific investment strategies is for illustrative purposes only.</p>
+      <div class="footer-copy">
+        <span>&copy; 2025 Valantum LLC. All Rights Reserved.</span>
+        <span>SEC-Registered Investment Advisor</span>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

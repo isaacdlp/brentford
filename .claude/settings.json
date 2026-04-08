@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/Isaac/.claude/projects/c--Users-Isaac-Documents-Code-valantum-com/**)",
+      "Bash(curl -L -o \"hero-1-manhattan.jpg\"      \"https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=1920&q=80\" -w \"hero-1-manhattan.jpg: %{http_code} %{size_download}b\\\\n\" --silent)",
+      "Bash(curl -L -o \"hero-2-estate.jpg\"         \"https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1920&q=80\" -w \"hero-2-estate.jpg: %{http_code} %{size_download}b\\\\n\" --silent)",
+      "Bash(curl -L -o \"hero-3-yacht.jpg\"          \"https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?auto=format&fit=crop&w=1920&q=80\" -w \"hero-3-yacht.jpg: %{http_code} %{size_download}b\\\\n\" --silent)",
+      "Bash(curl -L -o \"hero-4-family-beach.jpg\"   \"https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1920&q=80\" -w \"hero-4-family-beach.jpg: %{http_code} %{size_download}b\\\\n\" --silent)",
+      "Bash(curl -L -o \"lifestyle-horse-racing.jpg\" \"https://images.unsplash.com/photo-1553284966-19b8815c7817?auto=format&fit=crop&w=1400&q=80\" -w \"lifestyle-horse-racing.jpg: %{http_code} %{size_download}b\\\\n\" --silent)",
+      "Bash(curl -L -o \"wealth-management.jpg\"    \"https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=900&q=80\" -w \"wealth-management.jpg: %{http_code} %{size_download}b\\\\n\" --silent)",
+      "Bash(curl -L -o \"fund-management.jpg\"      \"https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=900&q=80\" -w \"fund-management.jpg: %{http_code} %{size_download}b\\\\n\" --silent)",
+      "Bash(curl -L -o \"tech-secondaries.jpg\"     \"https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80\" -w \"tech-secondaries.jpg: %{http_code} %{size_download}b\\\\n\" --silent)",
+      "Bash(curl -L -o \"stock-loan.jpg\"           \"https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=900&q=80\" -w \"stock-loan.jpg: %{http_code} %{size_download}b\\\\n\" --silent)",
+      "Bash(curl -L -o \"valantum-standard.jpg\"    \"https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=900&q=80\" -w \"valantum-standard.jpg: %{http_code} %{size_download}b\\\\n\" --silent)"
+    ]
+  }
+}
