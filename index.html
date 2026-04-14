@@ -38,6 +38,7 @@
         <li><a href="#tech-secondaries"  class="nav-link">Secondaries</a></li>
         <li><a href="#stock-loan"        class="nav-link">Loans</a></li>
         <li><a href="#about"             class="nav-link">About</a></li>
+        <li><a href="#insights"          class="nav-link">Insights</a></li>
         <li><a href="#contact"           class="nav-link">Contact</a></li>
         <li class="nav-private-mobile"><a href="https://scale.venture360.co" class="nav-link nav-link--private">Private Area</a></li>
 
@@ -625,68 +626,8 @@
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════ INSIGHTS -->
-<!-- NOTE: Insights section hidden pending real editorial content
-<section id="insights" aria-labelledby="insights-heading">
-  <div class="container">
-
-    <div class="section-header reveal">
-      <span class="eyebrow">Thought Leadership</span>
-      <h2 id="insights-heading">Perspectives &amp; Insights</h2>
-      <p class="section-sub">Our team shares views on markets, wealth planning, and the evolving landscape of alternative investments for discerning investors.</p>
-    </div>
-
-    <div class="insights-grid">
-
-      <article class="insight-card reveal">
-        <div class="insight-img"
-             style="background-image:url('media/stock-loan.jpg')"
-             role="img" aria-label="Financial markets">
-          <span class="insight-cat">Investment Perspectives</span>
-        </div>
-        <div class="insight-body">
-          <time class="insight-date" datetime="2025-03">March 2025</time>
-          <h3>The Case for Private Market Diversification in Today's Macro Environment</h3>
-          <p>As public market volatility persists, sophisticated investors are increasingly turning to private markets for return enhancement and portfolio resilience.</p>
-          <a href="#" class="insight-link">Read More →</a>
-        </div>
-      </article>
-
-      <article class="insight-card reveal">
-        <div class="insight-img"
-             style="background-image:url('media/tech-secondaries.jpg')"
-             role="img" aria-label="Technology innovation">
-          <span class="insight-cat">Technology Markets</span>
-        </div>
-        <div class="insight-body">
-          <time class="insight-date" datetime="2025-02">February 2025</time>
-          <h3>Technology Secondaries: Why Pre-IPO Access Has Never Mattered More</h3>
-          <p>The gap between private and public market valuations is creating historically attractive entry points for secondary buyers in the technology landscape.</p>
-          <a href="#" class="insight-link">Read More →</a>
-        </div>
-      </article>
-
-      <article class="insight-card reveal">
-        <div class="insight-img"
-             style="background-image:url('media/brentford-standard.jpg')"
-             role="img" aria-label="Family wealth planning">
-          <span class="insight-cat">Wealth Planning</span>
-        </div>
-        <div class="insight-body">
-          <time class="insight-date" datetime="2025-01">January 2025</time>
-          <h3>Estate Planning in a Changing Tax Landscape: What Families Need to Know Now</h3>
-          <p>With potential changes to the estate tax exemption on the horizon, high-net-worth families should act decisively to evaluate and strengthen their legacy plans.</p>
-          <a href="#" class="insight-link">Read More →</a>
-        </div>
-      </article>
-
-    </div>
-  </div>
-</section>
--->
-
 <!-- ══════════════════════════════════════════ THE BRENTFORD STANDARD -->
-<section id="standard" class="service-detail service-detail-alt" aria-labelledby="standard-heading">
+<section id="standard" class="service-detail" aria-labelledby="standard-heading">
   <div class="container">
     <div class="detail-grid">
 
@@ -761,6 +702,28 @@
   </div>
 </section>
 
+<!-- ═══════════════════════════════════════════════════════════ INSIGHTS -->
+<section id="insights" aria-labelledby="insights-heading">
+  <div class="container">
+
+    <div class="section-header reveal">
+      <span class="eyebrow">Thought Leadership</span>
+      <h2 id="insights-heading">Perspectives &amp; Insights</h2>
+      <p class="section-sub">Our team shares views on markets, wealth planning, and the evolving landscape of alternative investments for discerning investors.</p>
+      <a href="https://brentfordcapital.substack.com" class="btn btn-navy">Explore All Insights</a>
+    </div>
+
+    <div class="insights-grid" id="insights-grid">
+      <div class="insights-loading">Loading latest insights&hellip;</div>
+    </div>
+  </div>
+
+  <div class="newsletter-embed">
+    <p class="newsletter-heading">Get our latest Insights right in your inbox</p>
+    <iframe src="https://brentfordcapital.substack.com/embed" width="480" height="150" style="border:1px solid var(--border); background:var(--cream);" frameborder="0" scrolling="no"></iframe>
+  </div>
+</section>
+
 <!-- ═══════════════════════════════════════════════════════════ CONNECT -->
 <section id="contact" class="connect-section" aria-labelledby="contact-heading">
   <div class="container">
@@ -770,9 +733,30 @@
       <p>The most important step toward securing your family's financial future begins with a single conversation. We welcome inquiries from qualified investors and discerning families seeking a trusted partner for the long term.</p>
       <div class="connect-actions">
         <a href="mailto:inquiry@brentford.capital" class="btn btn-champagne">Schedule a Call</a>
-        <a href="mailto:inquiry@brentford.capital" class="btn btn-ghost-champagne">Send a Message</a>
       </div>
-      <p class="connect-note">For qualified investors only. Minimum investment requirements may apply. All inquiries are held in strictest confidence.</p>
+
+      <p>You can also reach us at <a href="mailto:inquiry@brentford.capital"><b>inquiry@brentford.capital</b></a></p>
+
+      <form class="contact-form" action="https://formspree.io/f/xeevovpe" method="POST" novalidate>
+        <div class="contact-form-row">
+          <div class="contact-form-group">
+            <label for="cf-name">Name</label>
+            <input type="text" id="cf-name" name="name" placeholder="Your full name" required>
+          </div>
+          <div class="contact-form-group">
+            <label for="cf-email">Email</label>
+            <input type="email" id="cf-email" name="email" placeholder="your@email.com" required>
+          </div>
+        </div>
+        <div class="contact-form-group">
+          <label for="cf-message">Message</label>
+          <textarea id="cf-message" name="message" rows="4" placeholder="How can we help you?" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-ghost-champagne contact-form-submit">Send a Message</button>
+        <p class="contact-form-status" aria-live="polite"></p>
+      </form>
+
+      <p>For qualified investors only. Minimum investment requirements may apply. All inquiries are held in strictest confidence.</p>
     </div>
   </div>
 </section>
@@ -824,6 +808,7 @@
         <div class="footer-col">
           <h4>Resources</h4>
           <ul>
+            <li><a href="#insights">Insights</a></li>
             <li><a href="#standard">Our Standard</a></li>
             <li><a href="#">Client Portal</a></li>
             <li><a href="#">Form ADV</a></li>

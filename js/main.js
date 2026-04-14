@@ -112,6 +112,7 @@
     }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
     revealEls.forEach(el => observer.observe(el));
+    window._revealObserver = observer; // expose for dynamic content (e.g. Substack feed)
   } else {
     // Fallback — show all
     revealEls.forEach(el => el.classList.add('visible'));
@@ -132,6 +133,46 @@
       child.classList.add(`stagger-${(i % 4) + 1}`);
     });
   });
+
+  /* ─── Contact Form — AJAX Submission ────────────────────────────────── */
+  const contactForm = qs('.contact-form');
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      const btn    = qs('.contact-form-submit', contactForm);
+      const status = qs('.contact-form-status', contactForm);
+
+      btn.disabled    = true;
+      btn.textContent = 'Sending…';
+      status.textContent = '';
+      status.className   = 'contact-form-status';
+
+      try {
+        const res = await fetch(contactForm.action, {
+          method:  'POST',
+          headers: { 'Accept': 'application/json' },
+          body:    new FormData(contactForm),
+        });
+
+        if (res.ok) {
+          status.textContent = 'Message sent successfully. We\'ll be in touch shortly.';
+          status.classList.add('contact-form-status--ok');
+          contactForm.reset();
+          btn.textContent = 'Send a Message';
+        } else {
+          throw new Error('server');
+        }
+      } catch {
+        status.textContent = 'Error sending the message. Please try again or email us directly.';
+        status.classList.add('contact-form-status--err');
+        btn.textContent = 'Send a Message';
+      }
+
+      btn.disabled = false;
+    });
+  }
 
   /* ─── Smooth Scroll for Anchor Links ─────────────────────────────────── */
   document.addEventListener('click', e => {
@@ -167,4 +208,90 @@
 
   window.addEventListener('scroll', updateActiveLink, { passive: true });
 
+})();
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   Substack Insights Feed
+   Fetches the 3 latest posts from brentfordcapital.substack.com and renders
+   them into the #insights-grid using the existing insight-card styles.
+   ═══════════════════════════════════════════════════════════════════════════ */
+(function () {
+  'use strict';
+
+  const FEED_URL  = 'https://brentfordcapital.substack.com/feed';
+  const API_URL   = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(FEED_URL)}`;
+  const FALLBACK_IMG = 'https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=800&q=80';
+
+  /* Unsplash fallback pool — cycles through if multiple cards lack a thumbnail */
+  const FALLBACKS = [
+    'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=800&q=80',
+  ];
+
+  function stripHtml(html) {
+    const tmp = document.createElement('div');
+    tmp.innerHTML = html;
+    return tmp.textContent || tmp.innerText || '';
+  }
+
+  function formatDate(dateStr) {
+    const d = new Date(dateStr);
+    return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+  }
+
+  function isoDate(dateStr) {
+    return new Date(dateStr).toISOString().slice(0, 10);
+  }
+
+  function buildCard(item, fallbackIndex) {
+    const img        = item.thumbnail || item.enclosure?.link || FALLBACKS[fallbackIndex % FALLBACKS.length];
+    const category   = (item.categories && item.categories.length) ? item.categories[0] : 'Markets';
+    const snippet    = stripHtml(item.description).trim().replace(/\s+/g, ' ').slice(0, 160) + '…';
+
+    return `
+      <article class="insight-card reveal">
+        <a href="${item.link}" target="_blank" rel="noopener" aria-label="Read: ${item.title.replace(/"/g, '&quot;')}">
+          <div class="insight-img"
+               style="background-image:url('${img}')"
+               role="img" aria-label="${category}">
+            <span class="insight-cat">${category}</span>
+          </div>
+        </a>
+        <div class="insight-body">
+          <time class="insight-date" datetime="${isoDate(item.pubDate)}">${formatDate(item.pubDate)}</time>
+          <h3>${item.title}</h3>
+          <p>${snippet}</p>
+          <a href="${item.link}" target="_blank" rel="noopener" class="insight-link">Read More &rarr;</a>
+        </div>
+      </article>`;
+  }
+
+  function renderError(grid) {
+    grid.innerHTML = `
+      <div class="insights-error">
+        Unable to load insights at this time. Visit
+        <a href="https://brentfordcapital.substack.com" target="_blank" rel="noopener">our Substack</a>
+        for the latest perspectives.
+      </div>`;
+  }
+
+  const grid = document.getElementById('insights-grid');
+  if (!grid) return;
+
+  fetch(API_URL)
+    .then(function (res) { return res.json(); })
+    .then(function (data) {
+      if (!data.items || !data.items.length) { renderError(grid); return; }
+      const items = data.items.slice(0, 3);
+      grid.innerHTML = items.map(function (item, i) { return buildCard(item, i); }).join('');
+
+      /* Re-trigger scroll-reveal observer on the freshly added cards */
+      if (window._revealObserver) {
+        grid.querySelectorAll('.reveal').forEach(function (el) {
+          window._revealObserver.observe(el);
+        });
+      }
+    })
+    .catch(function () { renderError(grid); });
 })();

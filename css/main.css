@@ -93,6 +93,7 @@ p  { font-size: 1rem; line-height: 1.72; color: var(--text-mid); }
 }
 .section-header h2 { color: var(--navy); margin-bottom: 1rem; }
 .section-sub { font-size: 1.05rem; }
+.section-header .btn { margin-top: 2rem; }
 
 .section-header-light h2 { color: var(--white); }
 .section-header-light .section-sub { color: rgba(255,255,255,.68); }
@@ -885,6 +886,45 @@ p  { font-size: 1rem; line-height: 1.72; color: var(--text-mid); }
 }
 .insight-link:hover { color: var(--navy); }
 
+/* Substack newsletter embed */
+.newsletter-embed {
+  background: var(--cream);
+  padding: 2.5rem 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+.newsletter-heading {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(1.3rem, 2.5vw, 1.75rem);
+  font-weight: 400;
+  color: var(--navy);
+  text-align: center;
+  margin: 0;
+  letter-spacing: .01em;
+}
+.newsletter-embed iframe {
+  max-width: 100%;
+  display: block;
+}
+
+/* Substack feed states */
+.insights-loading,
+.insights-error {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 3rem 1rem;
+  font-size: .87rem;
+  color: var(--slate);
+  font-style: italic;
+  letter-spacing: .03em;
+}
+.insights-error a {
+  color: var(--champagne-dark);
+  text-decoration: underline;
+}
+
 /* ═══════════════════════════════════════════════════════════════ CONNECT */
 .connect-section {
   background: var(--navy-mid);
@@ -915,6 +955,70 @@ p  { font-size: 1rem; line-height: 1.72; color: var(--text-mid); }
   line-height: 1.6;
   max-width: 480px;
   margin: 0 auto;
+}
+
+/* ─── Contact Form ──────────────────────────────────────────────────────── */
+.contact-form {
+  margin: 2.5rem auto 2rem;
+  max-width: 620px;
+  text-align: left;
+}
+.contact-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.contact-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: .45rem;
+  margin-bottom: 1rem;
+}
+.contact-form-group label {
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--champagne);
+}
+.contact-form-group input,
+.contact-form-group textarea {
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(200,169,106,.3);
+  border-radius: 3px;
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: .95rem;
+  padding: .75rem 1rem;
+  resize: vertical;
+  transition: border-color .2s;
+  width: 100%;
+  box-sizing: border-box;
+}
+.contact-form-group input::placeholder,
+.contact-form-group textarea::placeholder {
+  color: rgba(255,255,255,.28);
+}
+.contact-form-group input:focus,
+.contact-form-group textarea:focus {
+  outline: none;
+  border-color: var(--champagne);
+  background: rgba(255,255,255,.09);
+}
+.contact-form-submit {
+  width: 100%;
+  justify-content: center;
+}
+.contact-form-status {
+  min-height: 1.4em;
+  margin-top: .9rem;
+  font-size: .85rem;
+  text-align: center;
+}
+.contact-form-status--ok  { color: var(--champagne-light); }
+.contact-form-status--err { color: #e07878; }
+@media (max-width: 580px) {
+  .contact-form-row { grid-template-columns: 1fr; }
 }
 
 /* ═══════════════════════════════════════════════════════════════ FOOTER */
